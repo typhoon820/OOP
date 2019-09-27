@@ -24,7 +24,7 @@ public abstract class Shape implements Comparable<Shape> {
         this.lineWeight = lineWeight;
     }
 
-    public abstract void draw();
+    public abstract void draw(PrintStream printStream);
 
     public Shape(String color, int lineWeight) {
         this.color = color;

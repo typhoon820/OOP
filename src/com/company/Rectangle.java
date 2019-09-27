@@ -3,6 +3,7 @@ package com.company;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class Rectangle extends Shape {
 
@@ -46,8 +47,8 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void draw() {
-        System.out.printf("I am a %s rectangle with angles at %s, %s\n",
+    public void draw(PrintStream printStream) {
+        printStream.printf("I am a %s rectangle with angles at %s, %s\n",
                 getColor(), leftBottomPoint.toString(), rightTopPoint.toString());
     }
 }

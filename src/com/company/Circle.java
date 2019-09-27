@@ -3,6 +3,7 @@ package com.company;
 import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintStream;
 
 public class Circle extends Shape {
 
@@ -44,7 +45,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public void draw() {
-        System.out.printf("I am %s circle of radius %d\n", getColor(), radius);
+    public void draw(PrintStream printStream) {
+        printStream.printf("I am %s circle of radius %d\n", getColor(), radius);
     }
 }

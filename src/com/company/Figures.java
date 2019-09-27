@@ -3,6 +3,7 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,8 +55,8 @@ public class Figures {
         shapes.sort(Shape::compareTo);
     }
 
-    public void print() {
-        System.out.println(collectionName);
-        shapes.forEach(Shape::draw);
+    public void print(PrintStream printStream) {
+        printStream.println(collectionName);
+        shapes.forEach(shape -> shape.draw(printStream));
     }
 }
